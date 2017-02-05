@@ -25,6 +25,6 @@ if ($conn->query($sql) === TRUE) {
     echo "<h1>Your ticket has been submitted successfully!</h1>";
 }
 else {
-	echo "<h1>Error submitting ticket, please contact IT.</h1>"
+	echo "<h1>Error submitting ticket, please contact IT.</h1>";
 }
 ?>
