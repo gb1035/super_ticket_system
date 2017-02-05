@@ -23,6 +23,7 @@ $sql = "INSERT INTO request (user_name, email, support_line, details) VALUES (" 
 echo $sql;
 if ($conn->query($sql) === TRUE) {
     echo "<h1>Your ticket has been submitted successfully!</h1>";
+}
 else {
 	echo "<h1>Error submitting ticket, please contact IT.</h1>"
 }
