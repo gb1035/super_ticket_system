@@ -19,10 +19,10 @@ if ($conn->connect_error) {
 }
 
 echo "Connected successfully";
-$uname = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["uname"])
-$email = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["email"])
-$support_line = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["support_line"])
-$details = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["details"])
+$uname = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["uname"]);
+$email = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["email"]);
+$support_line = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["support_line"]);
+$details = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["details"]);
 
 $sql = "INSERT INTO request (user_name, email, support_line, details) VALUES ('" . $uname . "', '" . $email . "', '" . $support_line . "', '" . $details . "');";
 echo $sql;
