@@ -16,6 +16,7 @@ echo "Connected successfully";
 $sql = "CREATE DATABASE ticket";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
+    $conn->query("USE ticket;");
     $sql="CREATE TABLE IF NOT EXISTS `request` (
 	  `id` int(11) NOT NULL AUTO_INCREMENT,
 	  `support_line` varchar(256) NOT NULL,
