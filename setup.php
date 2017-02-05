@@ -16,7 +16,7 @@ echo "Connected successfully";
 $sql = "CREATE DATABASE ticket";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
-    $sql="""CREATE TABLE IF NOT EXISTS `request` (
+    $sql="CREATE TABLE IF NOT EXISTS `request` (
 	  `id` int(11) NOT NULL AUTO_INCREMENT,
 	  `support_line` varchar(256) NOT NULL,
 	  `user_name` varchar(14) NOT NULL,
@@ -28,15 +28,15 @@ if ($conn->query($sql) === TRUE) {
 	  `files_id` int(11) NOT NULL,
 	  `assigned` varchar(10) NOT NULL,
 	  PRIMARY KEY (`id`)
-	);""";
+	);";
 	if ($conn->query($sql) === TRUE) {
 	    echo "Database created successfully";
-	    $sql = """CREATE TABLE IF NOT EXISTS `admins` (
+	    $sql = "CREATE TABLE IF NOT EXISTS `admins` (
 		  `id` int(11) NOT NULL AUTO_INCREMENT,
 		  `user` varchar(256) NOT NULL,
 		  `pass` varchar(256) NOT NULL,
 		  PRIMARY KEY (`id`)
-		  );""";
+		  );";
 		if ($conn->query($sql) === TRUE) {
 			echo "SETUP created successfully";
 			$sql = "INSERT INTO `admins` (id, user, pass) VALUES (1,admin,admin);";
