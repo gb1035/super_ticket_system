@@ -42,7 +42,7 @@ INSERT INTO `admins` (id, user, pass) VALUES (1,admin,admin);
     Details: <input type="textarea" name="details"><br>
     <input type="submit" value="Submit">
 </form>
-<a href="/admin">If you are an amdin, click here</a>
+<a href="/admin.php">If you are an amdin, click here</a>
 
 </body>
 </html>
