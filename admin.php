@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_COOKIE['username']) {
+if (isset($_COOKIE['username'])) {
 	echo "Welcome admin!";
 	echo $_COOKIE['username'];
 }
