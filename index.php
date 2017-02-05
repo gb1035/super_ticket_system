@@ -33,26 +33,16 @@ INSERT INTO `admins` (id, user, pass) VALUES (1,admin,admin);
 	<title>super ticket system</title>
 </head>
 <body>
+<h1>Welcome to Super Ticket System!</h1>
+<h3>Please fill out the following form to submit a ticket.</h3>
 <form id="userRequest" name="userrequest_form" class="form-horizontal" action="set_request.php" enctype="multipart/form-data" method="post">
     User Name: <input type="text" name="uname"><br>
     Email: <input type="text" name="email"><br>
     Support Line: <input type="text" name="support_line"><br>
-    Details: <input type="text" name="details"><br>
+    Details: <input type="textarea" name="details"><br>
     <input type="submit" value="Submit">
 </form>
-<?php
-$servername = "localhost";
-$username = "test";
-$password = "test";
+<a href="/admin">If you are an amdin, click here</a>
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-?>
 </body>
 </html>
