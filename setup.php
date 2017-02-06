@@ -40,7 +40,7 @@ if ($conn->query($sql) === TRUE) {
 		  );";
 		if ($conn->query($sql) === TRUE) {
 			echo "SETUP created successfully";
-			$sql = "INSERT INTO `admins` (id, user, pass) VALUES (1,admin,admin);";
+			$sql = "INSERT INTO `admins` (id, user, pass) VALUES (1,'admin','admin');";
 			$conn->query($sql);
 		}
 		else {

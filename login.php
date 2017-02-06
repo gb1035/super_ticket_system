@@ -1,12 +1,12 @@
+<?php
+if (!isset($_POST['submit'])){
+?>
 <html>
 <head>
 	<title>User Login Form - PHP MySQL Ligin System | W3Epic.com</title>
 </head>
 <body>
 <h1>User Login Form - PHP MySQL Ligin System | W3Epic.com</h1>
-<?php
-if (!isset($_POST['submit'])){
-?>
 <!-- The HTML login form -->
 	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
 		Username: <input type="text" name="username" /><br />
@@ -29,10 +29,16 @@ if (!isset($_POST['submit'])){
 	$sql = "SELECT * from admins WHERE user LIKE '{$username}' AND pass LIKE '{$password}' LIMIT 1";
 	$result = $mysqli->query($sql);
 	if (!$result->num_rows == 1) {
+		echo "<html>
+			<head>
+				<title>User Login Form - PHP MySQL Ligin System | W3Epic.com</title>
+			</head>
+			<body>"
 		echo "<p>Invalid username/password combination</p>";
 	} else {
-		echo "<p>Logged in successfully</p>";
+		// echo "<p>Logged in successfully</p>";
 		setcookie('username', $_POST['username'], time()+60*60*24*365, '/account', 'www.example.com');
+		header( 'Location: /admin.php' ) ;
 	}
 }
 ?>		
