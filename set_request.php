@@ -24,7 +24,7 @@ $email = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["email"]);
 $support_line = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["support_line"]);
 $details = preg_replace("/[^A-Za-z0-9 ,\.]/", "", $_POST["details"]);
 
-$sql = "INSERT INTO request (user_name, email, support_line, details) VALUES ('" . $uname . "', '" . $email . "', '" . $support_line . "', '" . $details . "');";
+$sql = "INSERT INTO request (user_name, email, support_line, details, finished) VALUES ('" . $uname . "', '" . $email . "', '" . $support_line . "', '" . $details . "',0);";
 echo $sql;
 if ($conn->query($sql) === TRUE) {
     echo "<h1>Your ticket has been submitted successfully!</h1>";

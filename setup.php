@@ -28,6 +28,7 @@ if ($conn->query($sql) === TRUE) {
 	  `details` text NOT NULL,
 	  `files_id` int(11) NOT NULL,
 	  `assigned` varchar(10) NOT NULL,
+	  `finished` int NOT NULL,
 	  PRIMARY KEY (`id`)
 	);";
 	if ($conn->query($sql) === TRUE) {
