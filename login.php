@@ -8,7 +8,7 @@ if (!isset($_POST['submit'])){
 <body>
 <h1>User Login Form - PHP MySQL Ligin System | W3Epic.com</h1>
 <!-- The HTML login form -->
-	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+	<form action="login.php" method="post">
 		Username: <input type="text" name="username" /><br />
 		Password: <input type="password" name="password" /><br />
 
