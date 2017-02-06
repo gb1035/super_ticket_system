@@ -1,14 +1,12 @@
 <?php
 
+var_dump($_GET)
 if (isset($_COOKIE['username']) && isset($_GET['ticket'])) {
 	if ($_COOKIE['username'] == 'admin'){
-
-
 		$servername = "localhost";
 		$username = "test";
 		$password = "test";
 		$database = "ticket";
-
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $database);
 
