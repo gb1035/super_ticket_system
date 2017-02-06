@@ -31,5 +31,6 @@ if ($conn->query($sql) === TRUE) {
 }
 else {
 	echo "<h1>Error submitting ticket, please contact IT.</h1>";
+	echo $conn->error;
 }
 ?>
