@@ -19,16 +19,16 @@ if ($conn->query($sql) === TRUE) {
     $conn->query("USE ticket;");
     $sql="CREATE TABLE IF NOT EXISTS `request` (
 	  `id` int(11) NOT NULL AUTO_INCREMENT,
-	  `support_line` varchar(256) NOT NULL,
-	  `user_name` varchar(14) NOT NULL,
-	  `user_id` varchar(14) NOT NULL,
-	  `email` varchar(256) NOT NULL,
-	  `application_code` varchar(8) NOT NULL,
-	  `request_domain` varchar(256) NOT NULL,
-	  `details` text NOT NULL,
-	  `files_id` int(11) NOT NULL,
-	  `assigned` varchar(10) NOT NULL,
-	  `finished` int NOT NULL,
+	  `support_line` varchar(256),
+	  `user_name` varchar(14),
+	  `user_id` varchar(14),
+	  `email` varchar(256),
+	  `application_code` varchar(8),
+	  `request_domain` varchar(256),
+	  `details` text,
+	  `files_id` int(11),
+	  `assigned` varchar(10),
+	  `finished` int,
 	  PRIMARY KEY (`id`)
 	);";
 	if ($conn->query($sql) === TRUE) {

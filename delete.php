@@ -11,7 +11,7 @@ if (isset($_COOKIE['username']) && isset($_GET['ticket'])) {
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $database);
 
-		$ticket = preg_replace("/[^0-9]/", "", $_GET["ticket"]);
+		$ticket = $_GET["ticket"]);
 
 		$sql = "UPDATE request SET finished = 1 where id = ". $ticket .";";
 		$result = $conn->query($sql);
