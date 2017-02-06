@@ -23,7 +23,7 @@ if (isset($_COOKIE['username'])) {
 		    // output data of each row
 		    echo "<table><tr><th>ID</th><th>User Name</th><th>Email</th><th>Title</th><th>Details</th></tr>";
 		    while($row = $result->fetch_assoc()) {
-		        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["user_name"]. "</td><td>" . $row["email"]. "</td><td>" .$row["support_line"]. "</td><td>". $row["details"] ."</td></tr>";
+		        echo "<tr><td><a href='/delete/'" . $row["id"]. ">Mark Complete</a></td><td>" . $row["user_name"]. "</td><td>" . $row["email"]. "</td><td>" .$row["support_line"]. "</td><td>". $row["details"] ."</td></tr>";
 		    }
 		    echo "</table>";
 		} else {
