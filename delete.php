@@ -23,7 +23,7 @@ if (isset($_COOKIE['username']) && isset($_GET['ticket'])) {
 	}
 }
 else{
-	header( 'Location: /admin.php' ) ;
+	echo "You are not authorized to view this page";
 }
 ?>
 
