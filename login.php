@@ -33,7 +33,7 @@ if (!isset($_POST['submit'])){
 			<head>
 				<title>User Login Form - PHP MySQL Ligin System | W3Epic.com</title>
 			</head>
-			<body>"
+			<body>";
 		echo "<p>Invalid username/password combination</p>";
 	} else {
 		// echo "<p>Logged in successfully</p>";
