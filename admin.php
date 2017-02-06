@@ -17,13 +17,20 @@ if (isset($_COOKIE['username'])) {
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $database);
 
+		if(isset($_GET['delete']))
+		{
+			$ticket = preg_replace("/[^0-9]/", "", $_GET["delete"]);
+			$sql = "UPDATE request SET finished = 1 where id = ". $ticket .";";
+			$result = $conn->query($sql);
+		}
+
 		$sql = "SELECT * FROM request where finished = 0;";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 		    // output data of each row
 		    echo "<table><tr><th></th><th>User Name</th><th>Email</th><th>Title</th><th>Details</th></tr>";
 		    while($row = $result->fetch_assoc()) {
-		        echo "<tr><td><a href='/delete.php?ticket=" . $row["id"]. "'>Mark Complete</a></td><td>" . $row["user_name"]. "</td><td>" . $row["email"]. "</td><td>" .$row["support_line"]. "</td><td>". $row["details"] ."</td></tr>";
+		        echo "<tr><td><a href='/admin.php?delete=" . $row["id"]. "'>Mark Complete</a></td><td>" . $row["user_name"]. "</td><td>" . $row["email"]. "</td><td>" .$row["support_line"]. "</td><td>". $row["details"] ."</td></tr>";
 		    }
 		    echo "</table>";
 		} else {
