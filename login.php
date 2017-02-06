@@ -37,7 +37,7 @@ if (!isset($_POST['submit'])){
 		echo "<p>Invalid username/password combination</p>";
 	} else {
 		// echo "<p>Logged in successfully</p>";
-		setcookie('username', $_POST['username'], time()+60*60*24*365, '/account', 'www.example.com');
+		setcookie('username', $_POST['username'], time()+3600, '/account');
 		header( 'Location: /admin.php' ) ;
 	}
 }
