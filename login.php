@@ -1,5 +1,3 @@
-XHTML
-
 <html>
 <head>
 	<title>User Login Form - PHP MySQL Ligin System | W3Epic.com</title>
@@ -18,7 +16,6 @@ if (!isset($_POST['submit'])){
 	</form>
 <?php
 } else {
-	require_once("db_const.php");
 	$mysqli = new mysqli('localhost', 'test', 'test', 'ticket');
 	# check connection
 	if ($mysqli->connect_errno) {
