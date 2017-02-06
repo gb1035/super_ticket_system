@@ -25,7 +25,7 @@ if (isset($_COOKIE['username'])) {
 		    while($row = $result->fetch_assoc()) {
 		        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["user_name"]. "</td><td>" . $row["email"]. "</td><td>" .$row["support_line"]. "</td><td>". $row["details"] ."</td></tr>";
 		    }
-		    echo "</table>"
+		    echo "</table>";
 		} else {
 		    echo "0 results";
 		}
