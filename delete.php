@@ -1,6 +1,7 @@
 <?php
 
 var_dump($_GET);
+echo $_GET['ticket'];
 if (isset($_COOKIE['username']) && isset($_GET['ticket'])) {
 	if ($_COOKIE['username'] == 'admin'){
 		$servername = "localhost";
